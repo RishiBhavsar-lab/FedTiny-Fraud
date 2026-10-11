@@ -1,0 +1,45 @@
+| Experiment          | Accuracy |     F1 |
+| ------------------- | -------: | -----: |
+| IID FP32            |    66.0% | 29.17% |
+| Non-IID FP32        |    86.6% | 19.28% |
+| Non-IID + Pruning   |    87.0% | 23.53% |
+| Non-IID + INT8      |    86.5% | 18.18% |
+| Pruning + INT8      |    87.0% | 23.53% |
+| Pruning + INT8 + DP |    87.6% | 29.55% |
+
+
+model size
+FP32 = 36 bytes
+INT8 = 9 bytes
+
+dashboard layout:
+
+╔════════════════════════════════════════════════════╗
+║              FEDTINY-FRAUD DASHBOARD               ║
+║     Federated Learning + TinyML Fraud Detection    ║
+╠════════════════════════════════════════════════════╣
+║                                                    ║
+║  Banks        Rounds       Features      Fraud     ║
+║    5             5            8           15%      ║
+║                                                    ║
+╠════════════════════════════════════════════════════╣
+║                                                    ║
+║             F1 SCORE COMPARISON                    ║
+║             [ BAR CHART ]                          ║
+║                                                    ║
+╠════════════════════════════════════════════════════╣
+║                                                    ║
+║       F1 ACROSS FEDERATED ROUNDS                   ║
+║             [ LINE GRAPH ]                         ║
+║                                                    ║
+╠════════════════════════════════════════════════════╣
+║                                                    ║
+║  MODEL SIZE                 FINAL RESULTS           ║
+║  FP32: 36 bytes             Accuracy: 87.6%        ║
+║  INT8: 9 bytes              F1: 29.55%             ║
+║                             Precision: ...         ║
+║                             Recall: ...            ║
+╚════════════════════════════════════════════════════╝
+
+
+
